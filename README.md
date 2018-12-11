@@ -29,6 +29,16 @@ U.S.A.
 
 <https://gnss-sdr.org>
 
+## Targets
+
+"Critter"    
+Intel NUC7i7BNH    
+Intel x86_64    
+Intel Core i7-7567U @ 3.5GHz x 2 x 2    
+Ubuntu 18.04.1 "bionic"    
+Linux 4.15.0    
+gcc 7.3.0    
+
 ## Notes
 
     jsloan@critter:~/src/com-diag-critter/Critter$ lsb_release -a
