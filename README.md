@@ -31,25 +31,22 @@ U.S.A.
 
 ## Notes
 
-    pi@critter:~ $ lsb_release --all
+    jsloan@critter:~/src/com-diag-critter/Critter$ lsb_release -a
     No LSB modules are available.
-    Distributor ID: Raspbian
-    Description:    Raspbian GNU/Linux 9.6 (stretch)
-    Release:    9.6
-    Codename:   stretch
-
-    pi@critter:~ $ uname -a
-    Linux critter 4.14.79-v7+ #1159 SMP Sun Nov 4 17:50:20 GMT 2018 armv7l GNU/Linux
-
-    pi@critter:~ $ hackrf_info
-    Found HackRF board 0:
-    USB descriptor string: 000000000000000087c867dc2b3a305f
-    Board ID Number: 2 (HackRF One)
-    Firmware Version: 2018.01.1
-    Part ID Number: 0xa000cb3c 0x00594f58
-    Serial Number: 0x00000000 0x00000000 0x87c867dc 0x2b3a305f
-
-    pi@critter:~ $ gnss-sdr --version
-    linux; GNU C++ version 6.2.0 20161010; Boost_106100; UHD_003.009.005-0-unknown
-    gnss-sdr version 0.0.8
-
+    Distributor ID:	Ubuntu
+    Description:	Ubuntu 18.04.1 LTS
+    Release:	18.04
+    Codename:	bionic
+    jsloan@critter:~/src/com-diag-critter/Critter$ uname -a
+    Linux critter 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+    jsloan@critter:~/src/com-diag-critter/Critter$ gcc --version
+    gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+    Copyright (C) 2017 Free Software Foundation, Inc.
+    This is free software; see the source for copying conditions.  There is NO
+    warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    
+    jsloan@critter:~/src/com-diag-critter/Critter$ gnss-sdr --version
+    linux; GNU C++ version 7.3.0; Boost_106501; UHD_003.010.003.000-0-unknown
+    
+    gnss-sdr version 0.0.9
+    jsloan@critter:~/src/com-diag-critter/Critter$
