@@ -29,6 +29,8 @@ U.S.A.
 
 <https://gnss-sdr.org>
 
+<https://osmocom.org/projects/gr-osmosdr/wiki>
+
 ## Notes
 
     pi@critter:~ $ lsb_release --all
