@@ -4,7 +4,7 @@ Musings with Software Defined Radio (SDR).
 
 ## Copyright
 
-Copyright 2017-2018 by the Digital Aggregates Corporation, Arvada Colorado U.S.A.
+Copyright 2017-2019 by the Digital Aggregates Corporation, Arvada Colorado U.S.A.
 
 ## License
 
