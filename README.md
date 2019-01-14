@@ -113,3 +113,7 @@ Ettus Research USRP B210
         serial: 31736DE
         product: B210
 
+    # gnss-sdr --config_file=../etc/gnss-b210-a.conf --log_dir=.
+
+    $ tail -f gnss_sdr_pvt.nmea | gpstool -E
+
