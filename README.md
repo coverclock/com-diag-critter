@@ -46,8 +46,10 @@ Ubuntu 18.04.1 "bionic"
 Linux 4.15.0    
 gcc 7.3.0    
 
-"Critter"
-Ettus Research USRP B210
+"Critter"    
+Ettus Research USRP B210    
+Ettus Research GPSDO TCXO    
+Crystek Microwave CBTEE-01-50-6000 bias tee    
 
 ## Notes
 
