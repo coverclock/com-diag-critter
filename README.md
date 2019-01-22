@@ -21,6 +21,10 @@ Suite 209
 Wheat Ridge CO 80033  
 U.S.A.  
 
+## Articles
+
+<https://coverclock.blogspot.com/2018/04/a-menagerie-of-gps-devices-with-usb.html>
+
 ## Resources
 
 <https://wiki.gnuradio.org/index.php/Tutorials>
@@ -37,18 +41,21 @@ U.S.A.
 
 <https://osmocom.org/projects/gr-osmosdr/wiki>
 
+<https://www.ettus.com/product/details/UB210-KIT>
+
 ## Targets
 
 "Cadmium"    
 Intel NUC7i7BNH    
-Intel Core i7-7567U x86_64 @ 3.5GHz x 2 x 2    
-Ubuntu 18.04.1 "bionic"    
+Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2    
+Ubuntu 16.04.5 "Xenial Xerus"    
 Linux 4.15.0    
-gcc 7.3.0    
+gcc 5.4.0    
 
-"Critter"    
+## Peripherals
+
 Ettus Research USRP B210    
-Ettus Research GPSDO TCXO    
+Ettus Research TCXO GPSDO    
 Crystek Microwave CBTEE-01-50-6000 bias tee    
 
 ## Notes
