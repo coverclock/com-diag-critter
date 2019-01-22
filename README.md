@@ -8,7 +8,7 @@ Copyright 2017-2019 by the Digital Aggregates Corporation, Arvada Colorado U.S.A
 
 ## License
 
-Licensed under the terms of the FSF GNU GPL v2.0.
+Licensed under the terms in LICENSE.txt.
 
 ## Contact
 
