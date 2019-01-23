@@ -1,15 +1,13 @@
 #!/bin/basE
+# ${HOME}/src/com-diag-critter/Critter/bin/setup.sh
 # ${HOME}/src/com-diag-hazer
-# ${HOME}/src/com-diag-critter
 # ${HOME}/src/gnuradio
 # ${HOME}/src/gnss-sdr
-SELF=${SUDO_USER:-${USER}}
-MINE=$(eval cd ~${SELF};pwd)
-ROOT=$(readlink -f ${MINE}/src)
-HAZER=$(readlink -f ${MINE}/src/com-diag-hazer)
-CRITTER=$(readlink -f ${MINE}/src/com-diag-critter)
-GNURADIO=$(readlink -f ${MINE}/src/gnuradio)
-GNSSSDR=$(readlink -f ${MINE}/src/gnss-sdr)
+HERE=$(dirname ${BASH_SOURCE})
+THERE=$(cd ${HERE}; pwd)
+ROOT=$(readlink -f ${THERE}/../../..)
+HAZER=$(readlink -f ${ROOT}/com-diag-hazer)
+GNURADIO=$(readlink -f ${ROOT}/gnuradio)
+GNSSSDR=$(readlink -f ${GNURADIO}/gnss-sdr)
 . ${HAZER}/Hazer/out/host/bin/setup
 . ${GNURADIO}/setup_env.sh
-export PATH="${GNSSSDR}/usr/local/bin:$PATH"
