@@ -106,20 +106,7 @@ Crystek Microwave CBTEE-01-50-6000 bias tee
     
     gnss-sdr version 0.0.9
 
-    $ gnss-sdr --config_file=../../etc/gnss-file.conf
-    Initializing GNSS-SDR v0.0.10.git-next-b6f0c92 ... Please wait.
-    Logging will be written at "/tmp"
-    Use gnss-sdr --log_dir=/path/to/log to change that.
-    Processing file /tmp/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.dat, which contains 1600000000 [bytes]
-    GNSS signal recorded time to be processed: 99.999 [s]
-    Starting a TCP/IP server of RTCM messages on port 2101
-    The TCP/IP server of RTCM messages is up and running. Accepting connections ...
-    Tracking of GPS L1 C/A signal started on channel 0 for satellite GPS PRN 01 (Block IIF)
-    Current receiver time: 1 s
-    GNSS-SDR cannot create SysV message queues: Permission denied
-    jsloan@cadmium:~/src/com-diag-critter/Critter/tmp/gnss-file$ sudo su
-    root@cadmium:/home/jsloan/src/com-diag-critter/Critter/tmp/gnss-file# . ../../bin/setup.sh
-    root@cadmium:/home/jsloan/src/com-diag-critter/Critter/tmp/gnss-file# gnss-sdr --config_file=../../etc/gnss-file.conf
+    # gnss-sdr --config_file=../../etc/gnss-file.conf
     Initializing GNSS-SDR v0.0.10.git-next-b6f0c92 ... Please wait.
     Logging will be written at "/tmp"
     Use gnss-sdr --log_dir=/path/to/log to change that.
