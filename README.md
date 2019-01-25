@@ -45,6 +45,8 @@ U.S.A.
 
 <https://kb.ettus.com/Verifying_the_Operation_of_the_USRP_Using_UHD_and_GNU_Radio>
 
+<https://www.google.com/maps/place/41°16'29.3%22N+1°59'15.4%22E/@41.2748,1.985426,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d41.2748!4d1.98762>
+
 ## Targets
 
 "Cadmium"    
@@ -103,6 +105,244 @@ Crystek Microwave CBTEE-01-50-6000 bias tee
     linux; GNU C++ version 7.3.0; Boost_106501; UHD_003.010.003.000-0-unknown
     
     gnss-sdr version 0.0.9
+
+    $ gnss-sdr --config_file=../../etc/gnss-file.conf
+    Initializing GNSS-SDR v0.0.10.git-next-b6f0c92 ... Please wait.
+    Logging will be written at "/tmp"
+    Use gnss-sdr --log_dir=/path/to/log to change that.
+    Processing file /tmp/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.dat, which contains 1600000000 [bytes]
+    GNSS signal recorded time to be processed: 99.999 [s]
+    Starting a TCP/IP server of RTCM messages on port 2101
+    The TCP/IP server of RTCM messages is up and running. Accepting connections ...
+    Tracking of GPS L1 C/A signal started on channel 0 for satellite GPS PRN 01 (Block IIF)
+    Current receiver time: 1 s
+    GNSS-SDR cannot create SysV message queues: Permission denied
+    jsloan@cadmium:~/src/com-diag-critter/Critter/tmp/gnss-file$ sudo su
+    root@cadmium:/home/jsloan/src/com-diag-critter/Critter/tmp/gnss-file# . ../../bin/setup.sh
+    root@cadmium:/home/jsloan/src/com-diag-critter/Critter/tmp/gnss-file# gnss-sdr --config_file=../../etc/gnss-file.conf
+    Initializing GNSS-SDR v0.0.10.git-next-b6f0c92 ... Please wait.
+    Logging will be written at "/tmp"
+    Use gnss-sdr --log_dir=/path/to/log to change that.
+    Processing file /tmp/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.dat, which contains 1600000000 [bytes]
+    GNSS signal recorded time to be processed: 99.999 [s]
+    Starting a TCP/IP server of RTCM messages on port 2101
+    The TCP/IP server of RTCM messages is up and running. Accepting connections ...
+    Tracking of GPS L1 C/A signal started on channel 0 for satellite GPS PRN 01 (Block IIF)
+    Tracking of GPS L1 C/A signal started on channel 3 for satellite GPS PRN 11 (Block IIR)
+    Current receiver time: 1 s
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 17 (Block IIR-M)
+    Tracking of GPS L1 C/A signal started on channel 4 for satellite GPS PRN 20 (Block IIR)
+    Tracking of GPS L1 C/A signal started on channel 6 for satellite GPS PRN 32 (Block IIF)
+    Current receiver time: 2 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 30 (Block IIF)
+    Current receiver time: 3 s
+    Loss of lock in channel 2!
+    Current receiver time: 4 s
+    Current receiver time: 5 s
+    Current receiver time: 6 s
+    Current receiver time: 7 s
+    Current receiver time: 8 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 27 (Block IIF)
+    Current receiver time: 9 s
+    Current receiver time: 10 s
+    Current receiver time: 11 s
+    Current receiver time: 12 s
+    Loss of lock in channel 2!
+    Current receiver time: 13 s
+    Current receiver time: 14 s
+    New GPS NAV message received in channel 3: subframe 1 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 1 from satellite GPS PRN 01 (Block IIF)
+    Tracking of GPS L1 C/A signal started on channel 1 for satellite GPS PRN 21 (Block IIR)
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 27 (Block IIF)
+    Current receiver time: 15 s
+    Current receiver time: 16 s
+    Loss of lock in channel 2!
+    Current receiver time: 17 s
+    Current receiver time: 18 s
+    Current receiver time: 19 s
+    Current receiver time: 20 s
+    New GPS NAV message received in channel 6: subframe 2 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 0: subframe 2 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 7: subframe 2 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 2 from satellite GPS PRN 11 (Block IIR)
+    Current receiver time: 21 s
+    Current receiver time: 22 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 08 (Block IIF)
+    Current receiver time: 23 s
+    Loss of lock in channel 2!
+    Current receiver time: 24 s
+    Current receiver time: 25 s
+    Current receiver time: 26 s
+    New GPS NAV message received in channel 0: subframe 3 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 6: subframe 3 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 3: subframe 3 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 7: subframe 3 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 20 (Block IIR)
+    Current receiver time: 27 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 03 (Block IIF)
+    Current receiver time: 28 s
+    Current receiver time: 29 s
+    Loss of lock in channel 5!
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 08 (Block IIF)
+    Current receiver time: 30 s
+    Loss of lock in channel 5!
+    Current receiver time: 31 s
+    Current receiver time: 32 s
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 6: subframe 4 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 0: subframe 4 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 3: subframe 4 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 7: subframe 4 from satellite GPS PRN 17 (Block IIR-M)
+    Current receiver time: 33 s
+    Current receiver time: 34 s
+    Current receiver time: 35 s
+    Current receiver time: 36 s
+    Current receiver time: 37 s
+    Current receiver time: 38 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 5 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 3: subframe 5 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 6: subframe 5 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 5 from satellite GPS PRN 17 (Block IIR-M)
+    Current receiver time: 39 s
+    Current receiver time: 40 s
+    Current receiver time: 41 s
+    Current receiver time: 42 s
+    Current receiver time: 43 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 09 (Block IIF)
+    Current receiver time: 44 s
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 1 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 6: subframe 1 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 3: subframe 1 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 7: subframe 1 from satellite GPS PRN 17 (Block IIR-M)
+    Current receiver time: 45 s
+    Current receiver time: 46 s
+    Loss of lock in channel 5!
+    Current receiver time: 47 s
+    Current receiver time: 48 s
+    Current receiver time: 49 s
+    Current receiver time: 50 s
+    New GPS NAV message received in channel 0: subframe 2 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 2 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 3: subframe 2 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 6: subframe 2 from satellite GPS PRN 32 (Block IIF)
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 26 (Block IIF)
+    Current receiver time: 51 s
+    Current receiver time: 52 s
+    Loss of lock in channel 5!
+    Current receiver time: 53 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 30 (Block IIF)
+    Current receiver time: 54 s
+    Loss of lock in channel 2!
+    Current receiver time: 55 s
+    Current receiver time: 56 s
+    New GPS NAV message received in channel 6: subframe 3 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 3 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 3 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 3 from satellite GPS PRN 01 (Block IIF)
+    First position fix at 2013-Apr-04 06:24:02.150000 UTC is Lat = 41.2748 [deg], Long = 1.98762 [deg], Height= 85.4156 [m]
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 30 (Block IIF)
+    Current receiver time: 57 s
+    Loss of lock in channel 2!
+    Current receiver time: 58 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 03 (Block IIF)
+    Current receiver time: 59 s
+    Loss of lock in channel 5!
+    Current receiver time: 1 min 0 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 03 (Block IIF)
+    Current receiver time: 1 min 1 s
+    Loss of lock in channel 5!
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 06 (Block IIF)
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 03 (Block IIF)
+    Current receiver time: 1 min 2 s
+    New GPS NAV message received in channel 7: subframe 4 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 4 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 4 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 6: subframe 4 from satellite GPS PRN 32 (Block IIF)
+    Loss of lock in channel 2!
+    Current receiver time: 1 min 3 s
+    Current receiver time: 1 min 4 s
+    Current receiver time: 1 min 5 s
+    Current receiver time: 1 min 6 s
+    Current receiver time: 1 min 7 s
+    Current receiver time: 1 min 8 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 6: subframe 5 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 5 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 5 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 5 from satellite GPS PRN 01 (Block IIF)
+    Current receiver time: 1 min 9 s
+    Current receiver time: 1 min 10 s
+    Current receiver time: 1 min 11 s
+    Current receiver time: 1 min 12 s
+    Current receiver time: 1 min 13 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 06 (Block IIF)
+    Current receiver time: 1 min 14 s
+    New GPS NAV message received in channel 7: subframe 1 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 1 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 1 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 6: subframe 1 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 20 (Block IIR)
+    Current receiver time: 1 min 15 s
+    Current receiver time: 1 min 16 s
+    Loss of lock in channel 2!
+    Current receiver time: 1 min 17 s
+    Current receiver time: 1 min 18 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 24 (Block IIF)
+    Current receiver time: 1 min 19 s
+    Loss of lock in channel 2!
+    Current receiver time: 1 min 20 s
+    New GPS NAV message received in channel 0: subframe 2 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 6: subframe 2 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 2 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 2 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 20 (Block IIR)
+    Current receiver time: 1 min 21 s
+    Current receiver time: 1 min 22 s
+    Current receiver time: 1 min 23 s
+    Current receiver time: 1 min 24 s
+    Current receiver time: 1 min 25 s
+    Current receiver time: 1 min 26 s
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 3: subframe 3 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 6: subframe 3 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 0: subframe 3 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 3 from satellite GPS PRN 17 (Block IIR-M)
+    Current receiver time: 1 min 27 s
+    Current receiver time: 1 min 28 s
+    Current receiver time: 1 min 29 s
+    Current receiver time: 1 min 30 s
+    Current receiver time: 1 min 31 s
+    Current receiver time: 1 min 32 s
+    New GPS NAV message received in channel 3: subframe 4 from satellite GPS PRN 11 (Block IIR)
+    New GPS NAV message received in channel 7: subframe 4 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 6: subframe 4 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 4 from satellite GPS PRN 01 (Block IIF)
+    Current receiver time: 1 min 33 s
+    Current receiver time: 1 min 34 s
+    Current receiver time: 1 min 35 s
+    Current receiver time: 1 min 36 s
+    Current receiver time: 1 min 37 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 27 (Block IIF)
+    Current receiver time: 1 min 38 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 20 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 5 from satellite GPS PRN 01 (Block IIF)
+    New GPS NAV message received in channel 6: subframe 5 from satellite GPS PRN 32 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 5 from satellite GPS PRN 17 (Block IIR-M)
+    New GPS NAV message received in channel 3: subframe 5 from satellite GPS PRN 11 (Block IIR)
+    Loss of lock in channel 2!
+    Current receiver time: 1 min 39 s
+    Current receiver time: 1 min 40 s
+    Stopping GNSS-SDR, please wait!
+    Total GNSS-SDR run time: 17.8708 [seconds]
+    GNSS-SDR program ended.
+    Stopping TCP/IP server on port 2101
 
     # /usr/lib/uhd/utils/uhd_images_downloader.py
     Images destination:      /usr/share/uhd/images
