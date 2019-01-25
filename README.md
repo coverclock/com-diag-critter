@@ -45,6 +45,8 @@ U.S.A.
 
 <https://kb.ettus.com/Verifying_the_Operation_of_the_USRP_Using_UHD_and_GNU_Radio>
 
+<http://lists.ettus.com/pipermail/usrp-users_lists.ettus.com/2017-February/051558.html>
+
 <https://www.google.com/maps/place/41°16'29.3%22N+1°59'15.4%22E/@41.2748,1.985426,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d41.2748!4d1.98762>
 
 ## Targets
@@ -645,3 +647,4 @@ Crystek Microwave CBTEE-01-50-6000 bias tee
     $ . ../bin/setup.sh
     $ tail -f gnss_sdr_pvt.nmea | gpstool -E
 
+    # rx_ascii_art_dft --freq 1575420000 --rate 4e6 --gain 40 --bw 4e6 --ref-lvl -30
