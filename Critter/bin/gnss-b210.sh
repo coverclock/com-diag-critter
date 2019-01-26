@@ -7,4 +7,5 @@ WORK=${CRITTER}/Critter/tmp/gnss-b210
 mkdir -p ${WORK}
 cd ${WORK}
 . ../../bin/setup.sh
-gnss-sdr --config_file=../../etc/gnss-b210.conf --log_dir=. -logtostderr -colorlogtostderr
+CONF=gnss-b210
+gnss-sdr --config_file=../../etc/${CONF}.conf --log_dir=. -logtostderr -colorlogtostderr
