@@ -1,6 +1,6 @@
 # com-diag-critter
 
-Musings with Software Defined Radio (SDR).
+Musings with Global Navigation Satellite System (GNSS) Software Defined Radio (SDR).
 
 ## Copyright
 
@@ -51,20 +51,21 @@ U.S.A.
 
 <https://github.com/gnuradio/gnuradio/issues/1706>
 
-## Targets
+## Hardware
 
-"Cadmium"    
-Intel NUC7i7BNH    
-Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2    
+Intel NUC7i7BNH (Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2)    
+Ettus Research USRP B210    
+Ettus Research GPSDO TCXO    
+GPIO Labs Bias Tee    
+GPIO Labs Low Noise Amplifier    
+
+## Software
+
 Ubuntu 16.04.5 "Xenial Xerus"    
 Linux 4.15.0    
 gcc 5.4.0    
-
-## Peripherals
-
-Ettus Research USRP B210    
-Ettus Research TCXO GPSDO    
-Crystek Microwave CBTEE-01-50-6000 bias tee    
+GNU Radio 3.7.13.4
+GNSS-SDR 0.0.10
 
 ## Notes
 
@@ -1881,6 +1882,577 @@ Crystek Microwave CBTEE-01-50-6000 bias tee
     |   |   |   |   Gain Elements: None
 
     
-    # gnss-sdr --config_file=../../etc/gnss-b210.conf --log_dir=. -logtostderr -colorlogtostderr
+    # ../../bin/gnss-b210.sh # gnss-sdr --config_file=../../etc/gnss-b210.conf --log_dir=. -logtostderr -colorlogtostderr
+    Initializing GNSS-SDR v0.0.10 ... Please wait.
+    Logging will be written at .
+    I0206 12:15:04.590085  8484 gnss_block_factory.cc:197] Getting SignalSource with implementation UHD_Signal_Source
+    [32;1m[INFO] [UHD] [39;0mlinux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_3.14.0.0-1-g158bc694
+    [32;1m[INFO] [B200] [39;0mDetected Device: B210
+    [32;1m[INFO] [B200] [39;0mOperating over USB 3.
+    [32;1m[INFO] [B200] [39;0mDetecting internal GPSDO.... 
+    [32;1m[INFO] [GPS] [39;0mFound an internal GPSDO: GPSTCXO , Firmware Rev 0.929a
+    [32;1m[INFO] [B200] [39;0mInitialize CODEC control...
+    [32;1m[INFO] [B200] [39;0mInitialize Radio control...
+    [32;1m[INFO] [B200] [39;0mPerforming register loopback test... 
+    [32;1m[INFO] [B200] [39;0mRegister loopback test passed
+    [32;1m[INFO] [B200] [39;0mPerforming register loopback test... 
+    [32;1m[INFO] [B200] [39;0mRegister loopback test passed
+    [32;1m[INFO] [B200] [39;0mSetting master clock rate selection to 'automatic'.
+    [32;1m[INFO] [B200] [39;0mAsking for clock rate 16.000000 MHz... 
+    [32;1m[INFO] [B200] [39;0mActually got clock rate 16.000000 MHz.
+    [32;1m[INFO] [B200] [39;0mAsking for clock rate 32.000000 MHz... 
+    [32;1m[INFO] [B200] [39;0mActually got clock rate 32.000000 MHz.
+    Sampling Rate for the USRP device: 4000000.000000 [sps]...
+    I0206 12:15:08.367048  8484 uhd_signal_source.cc:166] Sampling Rate for the USRP device: 4000000.000000 [sps]...
+    UHD RF CHANNEL #0 SETTINGS
+    Actual USRP center freq.: 1575420000.000297 [Hz]...
+    I0206 12:15:08.488366  8484 uhd_signal_source.cc:176] Actual USRP center freq. set to: 1575420000.000297 [Hz]...
+    PLL Frequency tune error 0.000297 [Hz]...
+    I0206 12:15:08.488490  8484 uhd_signal_source.cc:180] PLL Frequency tune error 0.000297 [Hz]...
+    Actual daughterboard gain set to: 40.000000 dB...
+    I0206 12:15:08.488823  8484 uhd_signal_source.cc:185] Actual daughterboard gain set to: 40.000000 dB...
+    Setting RF bandpass filter bandwidth to: 2000000.000000 [Hz]...
+    Check for front-end LO: locked ... is Locked
+    I0206 12:15:08.491124  8484 gnss_block_factory.cc:243] Getting SignalConditioner with DataTypeAdapter implementation: Pass_Through, InputFilter implementation: Fir_Filter, and Resampler implementation: Pass_Through
+    I0206 12:15:08.492136  8484 gnss_block_factory.cc:275] Getting Observables with implementation Hybrid_Observables
+    I0206 12:15:08.492349  8484 gnss_block_factory.cc:298] Getting PVT with implementation RTKLIB_PVT
+    Starting a TCP/IP server of RTCM messages on port 2101
+    The TCP/IP server of RTCM messages is up and running. Accepting connections ...
+    I0206 12:15:08.494558  8484 gnss_block_factory.cc:808] Getting 8 GPS L1 C/A channels
+    I0206 12:15:08.494608  8484 gnss_block_factory.cc:318] Instantiating Channel 0 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.498035  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 0
+    I0206 12:15:08.498795  8484 gnss_block_factory.cc:318] Instantiating Channel 1 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.500470  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 1
+    I0206 12:15:08.501168  8484 gnss_block_factory.cc:318] Instantiating Channel 2 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.502820  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 2
+    I0206 12:15:08.503545  8484 gnss_block_factory.cc:318] Instantiating Channel 3 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.505218  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 3
+    I0206 12:15:08.505930  8484 gnss_block_factory.cc:318] Instantiating Channel 4 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.507580  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 4
+    I0206 12:15:08.508296  8484 gnss_block_factory.cc:318] Instantiating Channel 5 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.509956  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 5
+    I0206 12:15:08.510677  8484 gnss_block_factory.cc:318] Instantiating Channel 6 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.512339  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 6
+    I0206 12:15:08.513067  8484 gnss_block_factory.cc:318] Instantiating Channel 7 with Acquisition Implementation: GPS_L1_CA_PCPS_Acquisition, Tracking Implementation: GPS_L1_CA_DLL_PLL_Tracking, Telemetry Decoder implementation: GPS_L1_CA_Telemetry_Decoder
+    I0206 12:15:08.514741  8484 dll_pll_veml_tracking.cc:1288] Tracking Channel set to 7
+    I0206 12:15:08.515453  8484 gnss_block_factory.cc:838] Getting 0 GPS L2C (M) channels
+    I0206 12:15:08.515462  8484 gnss_block_factory.cc:867] Getting 0 GPS L5 channels
+    I0206 12:15:08.515466  8484 gnss_block_factory.cc:896] Getting 0 GALILEO E1 B (I/NAV OS) channels
+    I0206 12:15:08.515470  8484 gnss_block_factory.cc:925] Getting 0 GALILEO E5a I (F/NAV OS) channels
+    I0206 12:15:08.515492  8484 gnss_block_factory.cc:954] Getting 0 GLONASS L1 C/A channels
+    I0206 12:15:08.515496  8484 gnss_block_factory.cc:984] Getting 0 GLONASS L2 C/A channels
+    I0206 12:15:08.515686  8484 gnss_flowgraph.cc:119] Connecting flowgraph
+    I0206 12:15:08.515817  8484 gnss_flowgraph.cc:239] sig_source_.at(i)->get_right_block()->output_signature()->max_streams()=1
+    I0206 12:15:08.515823  8484 gnss_flowgraph.cc:240] sig_conditioner_.at(signal_conditioner_ID)->get_left_block()->input_signature()=-1
+    I0206 12:15:08.515826  8484 gnss_flowgraph.cc:252] connecting sig_source_ 0 stream 0 to conditioner 0
+    I0206 12:15:08.516607  8484 gnss_flowgraph.cc:652] Channel 0 assigned to GPS PRN 01 (Block IIF) Signal 1C
+    I0206 12:15:08.516618  8484 gnss_flowgraph.cc:659] Channel 0 connected to observables and ready for acquisition
+    I0206 12:15:08.516620  8484 gnss_flowgraph.cc:652] Channel 1 assigned to GPS PRN 02 (Block IIR) Signal 1C
+    I0206 12:15:08.516624  8484 gnss_flowgraph.cc:663] Channel 1 connected to observables in standby mode
+    I0206 12:15:08.516626  8484 gnss_flowgraph.cc:652] Channel 2 assigned to GPS PRN 03 (Block IIF) Signal 1C
+    I0206 12:15:08.516643  8484 gnss_flowgraph.cc:663] Channel 2 connected to observables in standby mode
+    I0206 12:15:08.516647  8484 gnss_flowgraph.cc:652] Channel 3 assigned to GPS PRN 04 (Block Unknown) Signal 1C
+    I0206 12:15:08.516654  8484 gnss_flowgraph.cc:663] Channel 3 connected to observables in standby mode
+    I0206 12:15:08.516659  8484 gnss_flowgraph.cc:652] Channel 4 assigned to GPS PRN 05 (Block IIR-M) Signal 1C
+    I0206 12:15:08.516664  8484 gnss_flowgraph.cc:663] Channel 4 connected to observables in standby mode
+    I0206 12:15:08.516669  8484 gnss_flowgraph.cc:652] Channel 5 assigned to GPS PRN 06 (Block IIF) Signal 1C
+    I0206 12:15:08.516674  8484 gnss_flowgraph.cc:663] Channel 5 connected to observables in standby mode
+    I0206 12:15:08.516679  8484 gnss_flowgraph.cc:652] Channel 6 assigned to GPS PRN 07 (Block IIR-M) Signal 1C
+    I0206 12:15:08.516683  8484 gnss_flowgraph.cc:663] Channel 6 connected to observables in standby mode
+    I0206 12:15:08.516688  8484 gnss_flowgraph.cc:652] Channel 7 assigned to GPS PRN 08 (Block IIF) Signal 1C
+    I0206 12:15:08.516692  8484 gnss_flowgraph.cc:663] Channel 7 connected to observables in standby mode
+    I0206 12:15:08.516696  8484 gnss_flowgraph.cc:668] Flowgraph connected
+    I0206 12:15:08.516703  8484 control_thread.cc:232] Flowgraph connected
+    I0206 12:15:08.519347  8484 control_thread.cc:243] Flowgraph started
+    Current receiver time: 1 s
+    I0206 12:15:08.539925  8554 hybrid_observables_cc.cc:508] Observables clock step samples set to 4000
+    Current receiver time: 2 s
+    Current receiver time: 3 s
+    Current receiver time: 4 s
+    Current receiver time: 5 s
+    Current receiver time: 6 s
+    Current receiver time: 7 s
+    Current receiver time: 8 s
+    Current receiver time: 9 s
+    Current receiver time: 10 s
+    Current receiver time: 11 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 21 (Block IIR)
+    I0206 12:15:18.656708  8484 gnss_flowgraph.cc:1053] Channel 5 ACQ SUCCESS satellite GPS PRN 21 (Block IIR)
+    Current receiver time: 12 s
+    Loss of lock in channel 5!
+    I0206 12:15:19.729135  8537 dll_pll_veml_tracking.cc:688] Loss of lock in channel 5!
+    I0206 12:15:19.729168  8484 gnss_flowgraph.cc:1120] Channel 5 TRK FAILED satellite GPS PRN 21 (Block IIR)
+    I0206 12:15:19.729176  8484 gnss_flowgraph.cc:1133] Channel 5 Idle state
+    Current receiver time: 13 s
+    Current receiver time: 14 s
+    Current receiver time: 15 s
+    Current receiver time: 16 s
+    Current receiver time: 17 s
+    Current receiver time: 18 s
+    Current receiver time: 19 s
+    Current receiver time: 20 s
+    Current receiver time: 21 s
+    Current receiver time: 22 s
+    Current receiver time: 23 s
+    Current receiver time: 24 s
+    Current receiver time: 25 s
+    Current receiver time: 26 s
+    Current receiver time: 27 s
+    Current receiver time: 28 s
+    Current receiver time: 29 s
+    Current receiver time: 30 s
+    Current receiver time: 31 s
+    Current receiver time: 32 s
+    Current receiver time: 33 s
+    Current receiver time: 34 s
+    Current receiver time: 35 s
+    Current receiver time: 36 s
+    Current receiver time: 37 s
+    Current receiver time: 38 s
+    Current receiver time: 39 s
+    Current receiver time: 40 s
+    Current receiver time: 41 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 29 (Block IIR-M)
+    I0206 12:15:48.995383  8484 gnss_flowgraph.cc:1053] Channel 2 ACQ SUCCESS satellite GPS PRN 29 (Block IIR-M)
+    Current receiver time: 42 s
+    Loss of lock in channel 2!
+    I0206 12:15:50.068732  8546 dll_pll_veml_tracking.cc:688] Loss of lock in channel 2!
+    I0206 12:15:50.068799  8484 gnss_flowgraph.cc:1120] Channel 2 TRK FAILED satellite GPS PRN 29 (Block IIR-M)
+    I0206 12:15:50.068807  8484 gnss_flowgraph.cc:1133] Channel 2 Idle state
+    Current receiver time: 43 s
+    Current receiver time: 44 s
+    Current receiver time: 45 s
+    Current receiver time: 46 s
+    Current receiver time: 47 s
+    Current receiver time: 48 s
+    Tracking of GPS L1 C/A signal started on channel 2 for satellite GPS PRN 22 (Block IIR)
+    I0206 12:15:56.445611  8484 gnss_flowgraph.cc:1053] Channel 2 ACQ SUCCESS satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 49 s
+    Loss of lock in channel 2!
+    I0206 12:15:57.518456  8546 dll_pll_veml_tracking.cc:688] Loss of lock in channel 2!
+    I0206 12:15:57.518507  8484 gnss_flowgraph.cc:1120] Channel 2 TRK FAILED satellite GPS PRN 22 (Block IIR)
+    I0206 12:15:57.518519  8484 gnss_flowgraph.cc:1133] Channel 2 Idle state
+    Current receiver time: 50 s
+    Current receiver time: 51 s
+    Current receiver time: 52 s
+    Current receiver time: 53 s
+    Current receiver time: 54 s
+    Current receiver time: 55 s
+    Current receiver time: 56 s
+    Current receiver time: 57 s
+    Current receiver time: 58 s
+    Current receiver time: 59 s
+    Current receiver time: 1 min 0 s
+    Current receiver time: 1 min 1 s
+    Current receiver time: 1 min 2 s
+    Current receiver time: 1 min 3 s
+    Current receiver time: 1 min 4 s
+    Current receiver time: 1 min 5 s
+    Current receiver time: 1 min 6 s
+    Current receiver time: 1 min 7 s
+    Current receiver time: 1 min 8 s
+    Current receiver time: 1 min 9 s
+    Current receiver time: 1 min 10 s
+    Current receiver time: 1 min 11 s
+    Current receiver time: 1 min 12 s
+    Current receiver time: 1 min 13 s
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 03 (Block IIF)
+    I0206 12:16:21.061462  8484 gnss_flowgraph.cc:1053] Channel 7 ACQ SUCCESS satellite GPS PRN 03 (Block IIF)
+    Current receiver time: 1 min 14 s
+    Loss of lock in channel 7!
+    I0206 12:16:22.133860  8531 dll_pll_veml_tracking.cc:688] Loss of lock in channel 7!
+    I0206 12:16:22.133963  8484 gnss_flowgraph.cc:1120] Channel 7 TRK FAILED satellite GPS PRN 03 (Block IIF)
+    I0206 12:16:22.133973  8484 gnss_flowgraph.cc:1133] Channel 7 Idle state
+    Current receiver time: 1 min 15 s
+    Current receiver time: 1 min 16 s
+    Current receiver time: 1 min 17 s
+    Current receiver time: 1 min 18 s
+    Current receiver time: 1 min 19 s
+    Current receiver time: 1 min 20 s
+    Current receiver time: 1 min 21 s
+    Current receiver time: 1 min 22 s
+    Current receiver time: 1 min 23 s
+    Current receiver time: 1 min 24 s
+    Current receiver time: 1 min 25 s
+    Current receiver time: 1 min 26 s
+    Current receiver time: 1 min 27 s
+    Current receiver time: 1 min 28 s
+    Current receiver time: 1 min 29 s
+    Current receiver time: 1 min 30 s
+    Current receiver time: 1 min 31 s
+    Current receiver time: 1 min 32 s
+    Tracking of GPS L1 C/A signal started on channel 6 for satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:16:40.206312  8484 gnss_flowgraph.cc:1053] Channel 6 ACQ SUCCESS satellite GPS PRN 15 (Block IIR-M)
+    Current receiver time: 1 min 33 s
+    Loss of lock in channel 6!
+    I0206 12:16:41.279666  8534 dll_pll_veml_tracking.cc:688] Loss of lock in channel 6!
+    I0206 12:16:41.279708  8484 gnss_flowgraph.cc:1120] Channel 6 TRK FAILED satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:16:41.279719  8484 gnss_flowgraph.cc:1133] Channel 6 Idle state
+    Current receiver time: 1 min 34 s
+    Current receiver time: 1 min 35 s
+    Current receiver time: 1 min 36 s
+    Current receiver time: 1 min 37 s
+    Current receiver time: 1 min 38 s
+    Current receiver time: 1 min 39 s
+    Tracking of GPS L1 C/A signal started on channel 4 for satellite GPS PRN 22 (Block IIR)
+    I0206 12:16:46.636143  8484 gnss_flowgraph.cc:1053] Channel 4 ACQ SUCCESS satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 1 min 40 s
+    Current receiver time: 1 min 41 s
+    Current receiver time: 1 min 42 s
+    Current receiver time: 1 min 43 s
+    Current receiver time: 1 min 44 s
+    Current receiver time: 1 min 45 s
+    Current receiver time: 1 min 46 s
+    Current receiver time: 1 min 47 s
+    Current receiver time: 1 min 48 s
+    Current receiver time: 1 min 49 s
+    Current receiver time: 1 min 50 s
+    Current receiver time: 1 min 51 s
+    Tracking of GPS L1 C/A signal started on channel 0 for satellite GPS PRN 26 (Block IIF)
+    I0206 12:16:59.441416  8484 gnss_flowgraph.cc:1053] Channel 0 ACQ SUCCESS satellite GPS PRN 26 (Block IIF)
+    Current receiver time: 1 min 52 s
+    Loss of lock in channel 0!
+    I0206 12:17:00.514858  8552 dll_pll_veml_tracking.cc:688] Loss of lock in channel 0!
+    I0206 12:17:00.514914  8484 gnss_flowgraph.cc:1120] Channel 0 TRK FAILED satellite GPS PRN 26 (Block IIF)
+    I0206 12:17:00.514923  8484 gnss_flowgraph.cc:1133] Channel 0 Idle state
+    Current receiver time: 1 min 53 s
+    Current receiver time: 1 min 54 s
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 09 (Block IIF)
+    I0206 12:17:01.780375  8484 gnss_flowgraph.cc:1053] Channel 7 ACQ SUCCESS satellite GPS PRN 09 (Block IIF)
+    Current receiver time: 1 min 55 s
+    Loss of lock in channel 7!
+    I0206 12:17:02.853601  8531 dll_pll_veml_tracking.cc:688] Loss of lock in channel 7!
+    I0206 12:17:02.853639  8484 gnss_flowgraph.cc:1120] Channel 7 TRK FAILED satellite GPS PRN 09 (Block IIF)
+    I0206 12:17:02.853646  8484 gnss_flowgraph.cc:1133] Channel 7 Idle state
+    Current receiver time: 1 min 56 s
+    Current receiver time: 1 min 57 s
+    Current receiver time: 1 min 58 s
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 1 min 59 s
+    Current receiver time: 2 min 0 s
+    Current receiver time: 2 min 1 s
+    Current receiver time: 2 min 2 s
+    Current receiver time: 2 min 3 s
+    Current receiver time: 2 min 4 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 5 s
+    Current receiver time: 2 min 6 s
+    Current receiver time: 2 min 7 s
+    Current receiver time: 2 min 8 s
+    Current receiver time: 2 min 9 s
+    Current receiver time: 2 min 10 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:17:18.109138  8484 gnss_flowgraph.cc:1053] Channel 5 ACQ SUCCESS satellite GPS PRN 15 (Block IIR-M)
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 11 s
+    Loss of lock in channel 5!
+    I0206 12:17:19.181885  8537 dll_pll_veml_tracking.cc:688] Loss of lock in channel 5!
+    I0206 12:17:19.181926  8484 gnss_flowgraph.cc:1120] Channel 5 TRK FAILED satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:17:19.181937  8484 gnss_flowgraph.cc:1133] Channel 5 Idle state
+    Current receiver time: 2 min 12 s
+    Current receiver time: 2 min 13 s
+    Current receiver time: 2 min 14 s
+    Current receiver time: 2 min 15 s
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 29 (Block IIR-M)
+    I0206 12:17:23.211462  8484 gnss_flowgraph.cc:1053] Channel 7 ACQ SUCCESS satellite GPS PRN 29 (Block IIR-M)
+    Current receiver time: 2 min 16 s
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 22 (Block IIR)
+    Loss of lock in channel 7!
+    I0206 12:17:24.452927  8531 dll_pll_veml_tracking.cc:688] Loss of lock in channel 7!
+    I0206 12:17:24.452967  8484 gnss_flowgraph.cc:1120] Channel 7 TRK FAILED satellite GPS PRN 29 (Block IIR-M)
+    I0206 12:17:24.452977  8484 gnss_flowgraph.cc:1133] Channel 7 Idle state
+    Current receiver time: 2 min 17 s
+    Current receiver time: 2 min 18 s
+    Tracking of GPS L1 C/A signal started on channel 6 for satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:17:25.827410  8484 gnss_flowgraph.cc:1053] Channel 6 ACQ SUCCESS satellite GPS PRN 15 (Block IIR-M)
+    Current receiver time: 2 min 19 s
+    Loss of lock in channel 6!
+    I0206 12:17:26.899087  8534 dll_pll_veml_tracking.cc:688] Loss of lock in channel 6!
+    I0206 12:17:26.899185  8484 gnss_flowgraph.cc:1120] Channel 6 TRK FAILED satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:17:26.899196  8484 gnss_flowgraph.cc:1133] Channel 6 Idle state
+    Current receiver time: 2 min 20 s
+    Current receiver time: 2 min 21 s
+    Current receiver time: 2 min 22 s
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 23 s
+    Current receiver time: 2 min 24 s
+    Current receiver time: 2 min 25 s
+    Current receiver time: 2 min 26 s
+    Current receiver time: 2 min 27 s
+    Current receiver time: 2 min 28 s
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 29 s
+    Current receiver time: 2 min 30 s
+    Current receiver time: 2 min 31 s
+    Current receiver time: 2 min 32 s
+    Current receiver time: 2 min 33 s
+    Current receiver time: 2 min 34 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 35 s
+    Current receiver time: 2 min 36 s
+    Current receiver time: 2 min 37 s
+    Current receiver time: 2 min 38 s
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 07 (Block IIR-M)
+    I0206 12:17:46.059103  8484 gnss_flowgraph.cc:1053] Channel 7 ACQ SUCCESS satellite GPS PRN 07 (Block IIR-M)
+    Current receiver time: 2 min 39 s
+    Loss of lock in channel 7!
+    I0206 12:17:47.131256  8531 dll_pll_veml_tracking.cc:688] Loss of lock in channel 7!
+    I0206 12:17:47.131352  8484 gnss_flowgraph.cc:1120] Channel 7 TRK FAILED satellite GPS PRN 07 (Block IIR-M)
+    I0206 12:17:47.131361  8484 gnss_flowgraph.cc:1133] Channel 7 Idle state
+    Current receiver time: 2 min 40 s
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 41 s
+    Current receiver time: 2 min 42 s
+    Current receiver time: 2 min 43 s
+    Current receiver time: 2 min 44 s
+    Current receiver time: 2 min 45 s
+    Current receiver time: 2 min 46 s
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 47 s
+    Current receiver time: 2 min 48 s
+    Current receiver time: 2 min 49 s
+    Current receiver time: 2 min 50 s
+    Current receiver time: 2 min 51 s
+    Current receiver time: 2 min 52 s
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 53 s
+    Current receiver time: 2 min 54 s
+    Current receiver time: 2 min 55 s
+    Current receiver time: 2 min 56 s
+    Current receiver time: 2 min 57 s
+    Current receiver time: 2 min 58 s
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 2 min 59 s
+    Current receiver time: 3 min 0 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 31 (Block IIR-M)
+    I0206 12:18:08.253947  8484 gnss_flowgraph.cc:1053] Channel 5 ACQ SUCCESS satellite GPS PRN 31 (Block IIR-M)
+    Current receiver time: 3 min 1 s
+    Loss of lock in channel 5!
+    I0206 12:18:09.326190  8537 dll_pll_veml_tracking.cc:688] Loss of lock in channel 5!
+    I0206 12:18:09.326236  8484 gnss_flowgraph.cc:1120] Channel 5 TRK FAILED satellite GPS PRN 31 (Block IIR-M)
+    I0206 12:18:09.326244  8484 gnss_flowgraph.cc:1133] Channel 5 Idle state
+    Current receiver time: 3 min 2 s
+    Current receiver time: 3 min 3 s
+    Current receiver time: 3 min 4 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 5 s
+    Current receiver time: 3 min 6 s
+    Current receiver time: 3 min 7 s
+    Current receiver time: 3 min 8 s
+    Current receiver time: 3 min 9 s
+    Current receiver time: 3 min 10 s
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 11 s
+    Current receiver time: 3 min 12 s
+    Tracking of GPS L1 C/A signal started on channel 5 for satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:18:19.984392  8484 gnss_flowgraph.cc:1053] Channel 5 ACQ SUCCESS satellite GPS PRN 15 (Block IIR-M)
+    Current receiver time: 3 min 13 s
+    Loss of lock in channel 5!
+    I0206 12:18:21.057626  8537 dll_pll_veml_tracking.cc:688] Loss of lock in channel 5!
+    I0206 12:18:21.057790  8484 gnss_flowgraph.cc:1120] Channel 5 TRK FAILED satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:18:21.057798  8484 gnss_flowgraph.cc:1133] Channel 5 Idle state
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 31 (Block IIR-M)
+    I0206 12:18:21.210467  8484 gnss_flowgraph.cc:1053] Channel 7 ACQ SUCCESS satellite GPS PRN 31 (Block IIR-M)
+    Current receiver time: 3 min 14 s
+    Loss of lock in channel 7!
+    I0206 12:18:22.323814  8531 dll_pll_veml_tracking.cc:688] Loss of lock in channel 7!
+    I0206 12:18:22.323863  8484 gnss_flowgraph.cc:1120] Channel 7 TRK FAILED satellite GPS PRN 31 (Block IIR-M)
+    I0206 12:18:22.323875  8484 gnss_flowgraph.cc:1133] Channel 7 Idle state
+    Current receiver time: 3 min 15 s
+    Current receiver time: 3 min 16 s
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 17 s
+    Current receiver time: 3 min 18 s
+    Tracking of GPS L1 C/A signal started on channel 1 for satellite GPS PRN 10 (Block IIF)
+    I0206 12:18:25.926975  8484 gnss_flowgraph.cc:1053] Channel 1 ACQ SUCCESS satellite GPS PRN 10 (Block IIF)
+    Current receiver time: 3 min 19 s
+    Loss of lock in channel 1!
+    I0206 12:18:26.999140  8549 dll_pll_veml_tracking.cc:688] Loss of lock in channel 1!
+    I0206 12:18:26.999184  8484 gnss_flowgraph.cc:1120] Channel 1 TRK FAILED satellite GPS PRN 10 (Block IIF)
+    I0206 12:18:26.999193  8484 gnss_flowgraph.cc:1133] Channel 1 Idle state
+    Current receiver time: 3 min 20 s
+    Current receiver time: 3 min 21 s
+    Current receiver time: 3 min 22 s
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 23 s
+    Current receiver time: 3 min 24 s
+    Current receiver time: 3 min 25 s
+    Current receiver time: 3 min 26 s
+    Current receiver time: 3 min 27 s
+    Current receiver time: 3 min 28 s
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 29 s
+    Current receiver time: 3 min 30 s
+    Current receiver time: 3 min 31 s
+    Current receiver time: 3 min 32 s
+    Current receiver time: 3 min 33 s
+    Current receiver time: 3 min 34 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 35 s
+    Current receiver time: 3 min 36 s
+    Current receiver time: 3 min 37 s
+    Current receiver time: 3 min 38 s
+    Tracking of GPS L1 C/A signal started on channel 0 for satellite GPS PRN 18 (Block IIR)
+    I0206 12:18:45.790911  8484 gnss_flowgraph.cc:1053] Channel 0 ACQ SUCCESS satellite GPS PRN 18 (Block IIR)
+    Current receiver time: 3 min 39 s
+    Loss of lock in channel 0!
+    I0206 12:18:46.863987  8552 dll_pll_veml_tracking.cc:688] Loss of lock in channel 0!
+    I0206 12:18:46.864127  8484 gnss_flowgraph.cc:1120] Channel 0 TRK FAILED satellite GPS PRN 18 (Block IIR)
+    I0206 12:18:46.864151  8484 gnss_flowgraph.cc:1133] Channel 0 Idle state
+    Current receiver time: 3 min 40 s
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 41 s
+    Current receiver time: 3 min 42 s
+    Current receiver time: 3 min 43 s
+    Current receiver time: 3 min 44 s
+    Current receiver time: 3 min 45 s
+    Current receiver time: 3 min 46 s
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 47 s
+    Current receiver time: 3 min 48 s
+    Current receiver time: 3 min 49 s
+    Current receiver time: 3 min 50 s
+    Current receiver time: 3 min 51 s
+    Current receiver time: 3 min 52 s
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 53 s
+    Current receiver time: 3 min 54 s
+    Current receiver time: 3 min 55 s
+    Current receiver time: 3 min 56 s
+    Tracking of GPS L1 C/A signal started on channel 3 for satellite GPS PRN 28 (Block IIR)
+    I0206 12:19:04.311677  8484 gnss_flowgraph.cc:1053] Channel 3 ACQ SUCCESS satellite GPS PRN 28 (Block IIR)
+    Current receiver time: 3 min 57 s
+    Loss of lock in channel 3!
+    I0206 12:19:05.382539  8543 dll_pll_veml_tracking.cc:688] Loss of lock in channel 3!
+    I0206 12:19:05.382575  8484 gnss_flowgraph.cc:1120] Channel 3 TRK FAILED satellite GPS PRN 28 (Block IIR)
+    I0206 12:19:05.382581  8484 gnss_flowgraph.cc:1133] Channel 3 Idle state
+    Current receiver time: 3 min 58 s
+    Tracking of GPS L1 C/A signal started on channel 7 for satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:19:06.240459  8484 gnss_flowgraph.cc:1053] Channel 7 ACQ SUCCESS satellite GPS PRN 15 (Block IIR-M)
+    New GPS NAV message received in channel 4: subframe 4 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 3 min 59 s
+    Loss of lock in channel 7!
+    I0206 12:19:07.313253  8531 dll_pll_veml_tracking.cc:688] Loss of lock in channel 7!
+    I0206 12:19:07.313345  8484 gnss_flowgraph.cc:1120] Channel 7 TRK FAILED satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:19:07.313354  8484 gnss_flowgraph.cc:1133] Channel 7 Idle state
+    Current receiver time: 4 min 0 s
+    Current receiver time: 4 min 1 s
+    Current receiver time: 4 min 2 s
+    Current receiver time: 4 min 3 s
+    Current receiver time: 4 min 4 s
+    New GPS NAV message received in channel 4: subframe 5 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 4 min 5 s
+    Current receiver time: 4 min 6 s
+    Current receiver time: 4 min 7 s
+    Current receiver time: 4 min 8 s
+    Current receiver time: 4 min 9 s
+    Current receiver time: 4 min 10 s
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 4 min 11 s
+    Current receiver time: 4 min 12 s
+    Current receiver time: 4 min 13 s
+    Current receiver time: 4 min 14 s
+    Current receiver time: 4 min 15 s
+    Current receiver time: 4 min 16 s
+    New GPS NAV message received in channel 4: subframe 2 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 4 min 17 s
+    Current receiver time: 4 min 18 s
+    Tracking of GPS L1 C/A signal started on channel 0 for satellite GPS PRN 30 (Block IIF)
+    I0206 12:19:26.520628  8484 gnss_flowgraph.cc:1053] Channel 0 ACQ SUCCESS satellite GPS PRN 30 (Block IIF)
+    Current receiver time: 4 min 19 s
+    Current receiver time: 4 min 20 s
+    Loss of lock in channel 0!
+    I0206 12:19:27.635151  8552 dll_pll_veml_tracking.cc:688] Loss of lock in channel 0!
+    I0206 12:19:27.635195  8484 gnss_flowgraph.cc:1120] Channel 0 TRK FAILED satellite GPS PRN 30 (Block IIF)
+    I0206 12:19:27.635207  8484 gnss_flowgraph.cc:1133] Channel 0 Idle state
+    Current receiver time: 4 min 21 s
+    Current receiver time: 4 min 22 s
+    New GPS NAV message received in channel 4: subframe 3 from satellite GPS PRN 22 (Block IIR)
+	:
+    Current receiver time: 26 min 47 s
+    Current receiver time: 26 min 48 s
+    Current receiver time: 26 min 49 s
+    Current receiver time: 26 min 50 s
+    Current receiver time: 26 min 51 s
+    Current receiver time: 26 min 52 s
+    New GPS NAV message received in channel 2: subframe 3 from satellite GPS PRN 23 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 3 from satellite GPS PRN 26 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 3 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 26 min 53 s
+    Current receiver time: 26 min 54 s
+    Current receiver time: 26 min 55 s
+    Current receiver time: 26 min 56 s
+    Current receiver time: 26 min 57 s
+    Current receiver time: 26 min 58 s
+    New GPS NAV message received in channel 2: subframe 4 from satellite GPS PRN 23 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 4 from satellite GPS PRN 26 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 4 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 26 min 59 s
+    Current receiver time: 27 min 0 s
+    Current receiver time: 27 min 1 s
+    Tracking of GPS L1 C/A signal started on channel 1 for satellite GPS PRN 21 (Block IIR)
+    I0206 12:42:09.458606  8484 gnss_flowgraph.cc:1053] Channel 1 ACQ SUCCESS satellite GPS PRN 21 (Block IIR)
+    Current receiver time: 27 min 2 s
+    Current receiver time: 27 min 3 s
+    Loss of lock in channel 1!
+    I0206 12:42:10.573220  8549 dll_pll_veml_tracking.cc:688] Loss of lock in channel 1!
+    I0206 12:42:10.573282  8484 gnss_flowgraph.cc:1120] Channel 1 TRK FAILED satellite GPS PRN 21 (Block IIR)
+    I0206 12:42:10.573325  8484 gnss_flowgraph.cc:1133] Channel 1 Idle state
+    Current receiver time: 27 min 4 s
+    New GPS NAV message received in channel 2: subframe 5 from satellite GPS PRN 23 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 5 from satellite GPS PRN 26 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 5 from satellite GPS PRN 22 (Block IIR)
+    Current receiver time: 27 min 5 s
+    Tracking of GPS L1 C/A signal started on channel 3 for satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:42:12.866287  8484 gnss_flowgraph.cc:1053] Channel 3 ACQ SUCCESS satellite GPS PRN 15 (Block IIR-M)
+    Current receiver time: 27 min 6 s
+    Loss of lock in channel 3!
+    I0206 12:42:13.938762  8543 dll_pll_veml_tracking.cc:688] Loss of lock in channel 3!
+    I0206 12:42:13.938886  8484 gnss_flowgraph.cc:1120] Channel 3 TRK FAILED satellite GPS PRN 15 (Block IIR-M)
+    I0206 12:42:13.938905  8484 gnss_flowgraph.cc:1133] Channel 3 Idle state
+    Current receiver time: 27 min 7 s
+    Current receiver time: 27 min 8 s
+    Current receiver time: 27 min 9 s
+    Current receiver time: 27 min 10 s
+    New GPS NAV message received in channel 2: subframe 1 from satellite GPS PRN 23 (Block IIR)
+    New GPS NAV message received in channel 0: subframe 1 from satellite GPS PRN 26 (Block IIF)
+    New GPS NAV message received in channel 4: subframe 1 from satellite GPS PRN 03 (Block IIF)
+    New GPS NAV message received in channel 7: subframe 1 from satellite GPS PRN 22 (Block IIR)
+    First position fix at 2019-Feb-06 19:42:18.220000 UTC is Lat = 39.7943 [deg], Long = -105.154 [deg], Height= 1636.43 [m]
+    Current receiver time: 27 min 11 s
+    [1m[32mPosition at 2019-Feb-06 19:42:18.500000 UTC using 4 observations is Lat = 39.794350188 [deg], Long = -105.153588210 [deg], Height = 1640.671 [m][0m
+    The RINEX Navigation file header has been updated with UTC and IONO info.
+    [1m[32mPosition at 2019-Feb-06 19:42:19.000000 UTC using 4 observations is Lat = 39.794116656 [deg], Long = -105.153285253 [deg], Height = 1695.163 [m][0m
+    Current receiver time: 27 min 12 s
+    [1m[32mPosition at 2019-Feb-06 19:42:19.500000 UTC using 4 observations is Lat = 39.794173626 [deg], Long = -105.153385263 [deg], Height = 1694.779 [m][0m
+    [1m[32mPosition at 2019-Feb-06 19:42:20.000000 UTC using 4 observations is Lat = 39.794166837 [deg], Long = -105.153361703 [deg], Height = 1690.866 [m][0m
+    Current receiver time: 27 min 13 s
+    [1m[32mPosition at 2019-Feb-06 19:42:20.500000 UTC using 4 observations is Lat = 39.794484288 [deg], Long = -105.153720022 [deg], Height = 1600.236 [m][0m
+    [1m[32mPosition at 2019-Feb-06 19:42:21.000000 UTC using 4 observations is Lat = 39.794316867 [deg], Long = -105.153578324 [deg], Height = 1639.576 [m][0m
+    Current receiver time: 27 min 14 s
+    [1m[32mPosition at 2019-Feb-06 19:42:21.500000 UTC using 4 observations is Lat = 39.794234166 [deg], Long = -105.153414116 [deg], Height = 1676.643 [m][0m
+    [1m[32mPosition at 2019-Feb-06 19:42:22.000000 UTC using 4 observations is Lat = 39.794332455 [deg], Long = -105.153540891 [deg], Height = 1643.121 [m][0m
+    Current receiver time: 27 min 15 s
+    [1m[32mPosition at 2019-Feb-06 19:42:22.500000 UTC using 4 observations is Lat = 39.794340170 [deg], Long = -105.153561709 [deg], Height = 1633.737 [m][0m
+    [1m[32mPosition at 2019-Feb-06 19:42:23.000000 UTC using 4 observations is Lat = 39.794078526 [deg], Long = -105.153386707 [deg], Height = 1713.770 [m][0m
+    Current receiver time: 27 min 16 s
+    [1m[32mPosition at 2019-Feb-06 19:42:23.500000 UTC using 4 observations is Lat = 39.794284464 [deg], Long = -105.153435983 [deg], Height = 1647.437 [m][0m
+    [1m[32mPosition at 2019-Feb-06 19:42:24.000000 UTC using 4 observations is Lat = 39.794534533 [deg], Long = -105.153754679 [deg], Height = 1583.998 [m][0m
 
     $ tail -f gnss_sdr_pvt.nmea | gpstool -E
+    INP [ 82] $GPRMC,194247.69,A,3947.6596430,N,10509.2064054,W,35.85,313.71,0602
+    OUT [  0]
+    LOC 2019-02-06T12:42:47.863-07:00+00T          0/00:00:00.580 13.2.0   cadmium
+    TIM 2019-02-06T19:42:47Z 0pps                                          GPS
+    POS 39°47'39.57"N, 105°09'12.38"W   39.794327, -105.153440             GPS
+    ALT    5393.03'   1643.815m                                            GPS
+    COG NW 313.710°T   0.000°M                                             GPS
+    SOG     41.255mph     35.850knots      0.000kph                        GPS
+    INT RMC [ 4] 1dmy 1inc ( 11 12  7  5  0  4  0 )                        GPS
+    ACT [1]  {     3    22    23    26             } [ 4] [ 4]             GPS
+    DOP  15.30pdop   6.90hdop  13.70vdop                                   GPS
+    SAT [  1]     3:  44°elv  205°azm   35dBHz <                           GPS
+    SAT [  2]    22:  27°elv  188°azm   35dBHz <                           GPS
+    SAT [  3]    23:  69°elv  321°azm   38dBHz <                           GPS
+    SAT [  4]    26:  49°elv   58°azm   42dBHz <                           GPS
+
