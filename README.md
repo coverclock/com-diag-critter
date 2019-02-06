@@ -1881,4 +1881,6 @@ Crystek Microwave CBTEE-01-50-6000 bias tee
     |   |   |   |   Gain Elements: None
 
     
+    # gnss-sdr --config_file=../../etc/gnss-b210.conf --log_dir=. -logtostderr -colorlogtostderr
 
+    $ tail -f gnss_sdr_pvt.nmea | gpstool -E
