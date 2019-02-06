@@ -12,4 +12,4 @@ BUILD=$(readlink -f ${ROOT}/gnss-sdr-v0.0.10)
 GNSSSDR=$(readlink -f ${BUILD}/gnss-sdr)
 . ${HAZER}/Hazer/out/host/bin/setup
 . ${BUILD}/setup_env.sh
-export PATH=${PATH}:${BUILD}/lib/uhd/examples
+export PATH=${PATH}:${BUILD}/lib/uhd/examples:${BUILD}/lib/uhd/utils
