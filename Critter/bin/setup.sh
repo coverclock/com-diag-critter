@@ -8,8 +8,8 @@ THERE=$(cd ${HERE}; pwd)
 ROOT=$(readlink -f ${THERE}/../../..)
 HAZER=$(readlink -f ${ROOT}/com-diag-hazer)
 CRITTER=$(readlink -f ${ROOT}/com-diag-critter)
-GNURADIO=$(readlink -f ${ROOT}/gnuradio)
-GNSSSDR=$(readlink -f ${GNURADIO}/gnss-sdr)
+BUILD=$(readlink -f ${ROOT}/gnss-sdr-v0.0.10)
+GNSSSDR=$(readlink -f ${BUILD}/gnss-sdr)
 . ${HAZER}/Hazer/out/host/bin/setup
-. ${GNURADIO}/setup_env.sh
-export PATH=${PATH}:${GNURADIO}/lib/uhd/examples
+. ${BUILD}/setup_env.sh
+export PATH=${PATH}:${BUILD}/lib/uhd/examples
