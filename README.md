@@ -53,7 +53,7 @@ U.S.A.
 
 ## Hardware
 
-Intel NUC7i7BNH (Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2)    
+Intel NUC7i7BNH - Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2 ("Cadmium")    
 Ettus Research USRP B210    
 Ettus Research GPSDO TCXO    
 GPIO Labs Bias Tee    
@@ -1886,22 +1886,22 @@ GNSS-SDR 0.0.10
     Initializing GNSS-SDR v0.0.10 ... Please wait.
     Logging will be written at .
     I0206 12:15:04.590085  8484 gnss_block_factory.cc:197] Getting SignalSource with implementation UHD_Signal_Source
-    [32;1m[INFO] [UHD] [39;0mlinux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_3.14.0.0-1-g158bc694
-    [32;1m[INFO] [B200] [39;0mDetected Device: B210
-    [32;1m[INFO] [B200] [39;0mOperating over USB 3.
-    [32;1m[INFO] [B200] [39;0mDetecting internal GPSDO.... 
-    [32;1m[INFO] [GPS] [39;0mFound an internal GPSDO: GPSTCXO , Firmware Rev 0.929a
-    [32;1m[INFO] [B200] [39;0mInitialize CODEC control...
-    [32;1m[INFO] [B200] [39;0mInitialize Radio control...
-    [32;1m[INFO] [B200] [39;0mPerforming register loopback test... 
-    [32;1m[INFO] [B200] [39;0mRegister loopback test passed
-    [32;1m[INFO] [B200] [39;0mPerforming register loopback test... 
-    [32;1m[INFO] [B200] [39;0mRegister loopback test passed
-    [32;1m[INFO] [B200] [39;0mSetting master clock rate selection to 'automatic'.
-    [32;1m[INFO] [B200] [39;0mAsking for clock rate 16.000000 MHz... 
-    [32;1m[INFO] [B200] [39;0mActually got clock rate 16.000000 MHz.
-    [32;1m[INFO] [B200] [39;0mAsking for clock rate 32.000000 MHz... 
-    [32;1m[INFO] [B200] [39;0mActually got clock rate 32.000000 MHz.
+    [INFO] [UHD] linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_3.14.0.0-1-g158bc694
+    [INFO] [B200] Detected Device: B210
+    [INFO] [B200] Operating over USB 3.
+    [INFO] [B200] Detecting internal GPSDO.... 
+    [INFO] [GPS] Found an internal GPSDO: GPSTCXO , Firmware Rev 0.929a
+    [INFO] [B200] Initialize CODEC control...
+    [INFO] [B200] Initialize Radio control...
+    [INFO] [B200] Performing register loopback test... 
+    [INFO] [B200] Register loopback test passed
+    [INFO] [B200] Performing register loopback test... 
+    [INFO] [B200] Register loopback test passed
+    [INFO] [B200] Setting master clock rate selection to 'automatic'.
+    [INFO] [B200] Asking for clock rate 16.000000 MHz... 
+    [INFO] [B200] Actually got clock rate 16.000000 MHz.
+    [INFO] [B200] Asking for clock rate 32.000000 MHz... 
+    [INFO] [B200] Actually got clock rate 32.000000 MHz.
     Sampling Rate for the USRP device: 4000000.000000 [sps]...
     I0206 12:15:08.367048  8484 uhd_signal_source.cc:166] Sampling Rate for the USRP device: 4000000.000000 [sps]...
     UHD RF CHANNEL #0 SETTINGS
@@ -2420,24 +2420,24 @@ GNSS-SDR 0.0.10
     New GPS NAV message received in channel 7: subframe 1 from satellite GPS PRN 22 (Block IIR)
     First position fix at 2019-Feb-06 19:42:18.220000 UTC is Lat = 39.7943 [deg], Long = -105.154 [deg], Height= 1636.43 [m]
     Current receiver time: 27 min 11 s
-    [1m[32mPosition at 2019-Feb-06 19:42:18.500000 UTC using 4 observations is Lat = 39.794350188 [deg], Long = -105.153588210 [deg], Height = 1640.671 [m][0m
+    Position at 2019-Feb-06 19:42:18.500000 UTC using 4 observations is Lat = 39.794350188 [deg], Long = -105.153588210 [deg], Height = 1640.671 [m]
     The RINEX Navigation file header has been updated with UTC and IONO info.
-    [1m[32mPosition at 2019-Feb-06 19:42:19.000000 UTC using 4 observations is Lat = 39.794116656 [deg], Long = -105.153285253 [deg], Height = 1695.163 [m][0m
+    Position at 2019-Feb-06 19:42:19.000000 UTC using 4 observations is Lat = 39.794116656 [deg], Long = -105.153285253 [deg], Height = 1695.163 [m]
     Current receiver time: 27 min 12 s
-    [1m[32mPosition at 2019-Feb-06 19:42:19.500000 UTC using 4 observations is Lat = 39.794173626 [deg], Long = -105.153385263 [deg], Height = 1694.779 [m][0m
-    [1m[32mPosition at 2019-Feb-06 19:42:20.000000 UTC using 4 observations is Lat = 39.794166837 [deg], Long = -105.153361703 [deg], Height = 1690.866 [m][0m
+    Position at 2019-Feb-06 19:42:19.500000 UTC using 4 observations is Lat = 39.794173626 [deg], Long = -105.153385263 [deg], Height = 1694.779 [m]
+    Position at 2019-Feb-06 19:42:20.000000 UTC using 4 observations is Lat = 39.794166837 [deg], Long = -105.153361703 [deg], Height = 1690.866 [m]
     Current receiver time: 27 min 13 s
-    [1m[32mPosition at 2019-Feb-06 19:42:20.500000 UTC using 4 observations is Lat = 39.794484288 [deg], Long = -105.153720022 [deg], Height = 1600.236 [m][0m
-    [1m[32mPosition at 2019-Feb-06 19:42:21.000000 UTC using 4 observations is Lat = 39.794316867 [deg], Long = -105.153578324 [deg], Height = 1639.576 [m][0m
+    Position at 2019-Feb-06 19:42:20.500000 UTC using 4 observations is Lat = 39.794484288 [deg], Long = -105.153720022 [deg], Height = 1600.236 [m]
+    Position at 2019-Feb-06 19:42:21.000000 UTC using 4 observations is Lat = 39.794316867 [deg], Long = -105.153578324 [deg], Height = 1639.576 [m]
     Current receiver time: 27 min 14 s
-    [1m[32mPosition at 2019-Feb-06 19:42:21.500000 UTC using 4 observations is Lat = 39.794234166 [deg], Long = -105.153414116 [deg], Height = 1676.643 [m][0m
-    [1m[32mPosition at 2019-Feb-06 19:42:22.000000 UTC using 4 observations is Lat = 39.794332455 [deg], Long = -105.153540891 [deg], Height = 1643.121 [m][0m
+    Position at 2019-Feb-06 19:42:21.500000 UTC using 4 observations is Lat = 39.794234166 [deg], Long = -105.153414116 [deg], Height = 1676.643 [m]
+    Position at 2019-Feb-06 19:42:22.000000 UTC using 4 observations is Lat = 39.794332455 [deg], Long = -105.153540891 [deg], Height = 1643.121 [m]
     Current receiver time: 27 min 15 s
-    [1m[32mPosition at 2019-Feb-06 19:42:22.500000 UTC using 4 observations is Lat = 39.794340170 [deg], Long = -105.153561709 [deg], Height = 1633.737 [m][0m
-    [1m[32mPosition at 2019-Feb-06 19:42:23.000000 UTC using 4 observations is Lat = 39.794078526 [deg], Long = -105.153386707 [deg], Height = 1713.770 [m][0m
+    Position at 2019-Feb-06 19:42:22.500000 UTC using 4 observations is Lat = 39.794340170 [deg], Long = -105.153561709 [deg], Height = 1633.737 [m]
+    Position at 2019-Feb-06 19:42:23.000000 UTC using 4 observations is Lat = 39.794078526 [deg], Long = -105.153386707 [deg], Height = 1713.770 [m]
     Current receiver time: 27 min 16 s
-    [1m[32mPosition at 2019-Feb-06 19:42:23.500000 UTC using 4 observations is Lat = 39.794284464 [deg], Long = -105.153435983 [deg], Height = 1647.437 [m][0m
-    [1m[32mPosition at 2019-Feb-06 19:42:24.000000 UTC using 4 observations is Lat = 39.794534533 [deg], Long = -105.153754679 [deg], Height = 1583.998 [m][0m
+    Position at 2019-Feb-06 19:42:23.500000 UTC using 4 observations is Lat = 39.794284464 [deg], Long = -105.153435983 [deg], Height = 1647.437 [m]
+    Position at 2019-Feb-06 19:42:24.000000 UTC using 4 observations is Lat = 39.794534533 [deg], Long = -105.153754679 [deg], Height = 1583.998 [m]
 
     $ tail -f gnss_sdr_pvt.nmea | gpstool -E
     INP [ 82] $GPRMC,194247.69,A,3947.6596430,N,10509.2064054,W,35.85,313.71,0602
