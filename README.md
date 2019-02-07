@@ -69,6 +69,8 @@ GNSS-SDR 0.0.10
 
 ## Notes
 
+### Software Install
+
     $ pybombs -y prefix init `pwd` -a myprefix -R gnuradio-default
     [INFO] Prefix Python version is: 2.7.12
     [INFO] PyBOMBS Version 2.3.4a0
@@ -191,6 +193,8 @@ GNSS-SDR 0.0.10
     [INFO] Installation successful.
     [INFO] Phase 2 complete: All source packages installed.
 
+### Software Releases
+
     $ lsb_release -a
     No LSB modules are available.
     Distributor ID:    Ubuntu
@@ -219,6 +223,8 @@ GNSS-SDR 0.0.10
 
     $ gnss-sdr --version
     gnss-sdr version 0.0.10
+
+### Hardware Profiling
 
     $ cat /proc/cpuinfo
     processor	: 0
@@ -1464,6 +1470,8 @@ GNSS-SDR 0.0.10
     no architectures to test
     Writing /home/jsloan/.volk_gnsssdr/volk_gnsssdr_config ...
 
+### Software Sanity Testing
+
     wget https://sourceforge.net/projects/gnss-sdr/files/data/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.tar.gz
     --2019-02-06 10:06:40--  https://sourceforge.net/projects/gnss-sdr/files/data/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.tar.gz
     Resolving sourceforge.net (sourceforge.net)... 216.105.38.13
@@ -1716,6 +1724,8 @@ GNSS-SDR 0.0.10
     root@cadmium:/home/jsloan/src/com-diag-critter/Critter/tmp/gnss-file# exit
     exit
 
+### Universal Software Radio Peripheral Setup
+
     $ uhd_images_downloader.py
     [INFO] Images destination: /home/jsloan/src/gnss-sdr-v0.0.10/share/uhd/images
     [INFO] No inventory file found at /home/jsloan/src/gnss-sdr-v0.0.10/share/uhd/images/inventory.json. Creating an empty one.
@@ -1881,6 +1891,7 @@ GNSS-SDR 0.0.10
     |   |   |   |   Name: B210 TX dual DAC
     |   |   |   |   Gain Elements: None
 
+### Functional Testing
     
     # ../../bin/gnss-b210.sh # gnss-sdr --config_file=../../etc/gnss-b210.conf --log_dir=. -logtostderr -colorlogtostderr
     Initializing GNSS-SDR v0.0.10 ... Please wait.
