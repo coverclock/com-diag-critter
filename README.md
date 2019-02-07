@@ -64,8 +64,8 @@ GPIO Labs Low Noise Amplifier
 Ubuntu 16.04.5 "Xenial Xerus"    
 Linux 4.15.0    
 gcc 5.4.0    
-GNU Radio 3.7.13.4
-GNSS-SDR 0.0.10
+GNU Radio 3.7.13.4    
+GNSS-SDR 0.0.10    
 
 ## Notes
 
