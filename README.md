@@ -1472,7 +1472,7 @@ GNSS-SDR 0.0.10
 
 ### Software Sanity Testing
 
-    wget https://sourceforge.net/projects/gnss-sdr/files/data/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.tar.gz
+    $ wget https://sourceforge.net/projects/gnss-sdr/files/data/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.tar.gz
     --2019-02-06 10:06:40--  https://sourceforge.net/projects/gnss-sdr/files/data/2013_04_04_GNSS_SIGNAL_at_CTTC_SPAIN.tar.gz
     Resolving sourceforge.net (sourceforge.net)... 216.105.38.13
     Connecting to sourceforge.net (sourceforge.net)|216.105.38.13|:443... connected.
