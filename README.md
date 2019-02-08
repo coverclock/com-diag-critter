@@ -51,9 +51,11 @@ U.S.A.
 
 <https://github.com/gnuradio/gnuradio/issues/1706>
 
+<https://sourceforge.net/projects/gnss-sdr/lists/gnss-sdr-developers>
+
 ## Hardware
 
-Intel NUC7i7BNH - Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2 ("Cadmium")    
+Intel NUC7i7BNH (Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2) "Cadmium"    
 Ettus Research USRP B210    
 Ettus Research GPSDO TCXO    
 GPIO Labs Bias Tee    
