@@ -53,6 +53,8 @@ U.S.A.
 
 <https://sourceforge.net/projects/gnss-sdr/lists/gnss-sdr-developers>
 
+<https://github.com/gnss-sdr/gnss-sdr/issues/70>
+
 ## Hardware
 
 Intel NUC7i7BNH (Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2) "Cadmium"    

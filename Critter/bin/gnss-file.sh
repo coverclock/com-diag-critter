@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2019 Digital Aggregates Corporation, Arvada Colorado USA
 # Licensed under the terms in LICENSE.txt
-CONF=gnss-b210
+CONF=gnss-file
 HERE=$(dirname ${BASH_SOURCE})
 THERE=$(cd ${HERE}; pwd)
 ROOT=$(readlink -f ${THERE}/../../..)
