@@ -1,6 +1,6 @@
 # com-diag-critter
 
-Musings with Global Navigation Satellite System (GNSS) Software Defined Radio (SDR).
+Musings with Global Navigation Satellite System - Software Defined Radio (GNSS-SDR) and GNU Radio.
 
 ## Copyright
 
