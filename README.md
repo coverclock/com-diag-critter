@@ -12,7 +12,7 @@ Licensed under the terms in LICENSE.txt.
 
 ## Abstract
 
-Critter is my attempt to learn more about the U.S. Global Position System
+Critter is my attempt to learn more about the U.S. Global Positioning System
 (GPS) by running the open source GNSS-SDR, an application on top of GNU
 Radio. It has been a slow learning process, but after some false starts
 I am able to - eventually - get accurate position fixes. The GNSS-SDR
