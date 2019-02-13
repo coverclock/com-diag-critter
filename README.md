@@ -10,6 +10,23 @@ Copyright 2017-2019 by the Digital Aggregates Corporation, Arvada Colorado U.S.A
 
 Licensed under the terms in LICENSE.txt.
 
+## Abstract
+
+Critter is my attempt to learn more about the U.S. Global Position System
+(GPS) by running the open source GNSS-SDR, an application on top of GNU
+Radio. It has been a slow learning process, but after some false starts
+I am able to - eventually - get accurate position fixes. The GNSS-SDR
+package can generate NMEA output in real-time just like commercial GPS
+receivers, and I have processed that output with my Hazer NMEA parsing
+library.
+
+Important tip: don't kid yourself that you can put together your own
+GPS receiver more cheaply than just buying one off the interwebs. My
+investment in this project is (so far) about *one hundred times more
+expensive* than buying a GlobalSat BU353W10 GPS USB dongle to get a tiny
+fraction of the performance. My main takeaway from this project has been
+a deepened appreciation for the U-Blox 8 chip inside the BU353W10.
+
 ## Contact
 
 Chip Overclock  
@@ -20,6 +37,12 @@ Digital Aggregates Corporation
 Suite 209  
 Wheat Ridge CO 80033  
 U.S.A.  
+
+## Repositories
+
+<https://github.com/coverclock/com-diag-critter>
+
+<https://github.com/coverclock/com-diag-hazer>
 
 ## Articles
 
