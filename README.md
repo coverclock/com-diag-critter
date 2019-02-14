@@ -94,6 +94,16 @@ gcc 5.4.0
 GNU Radio 3.7.13.4    
 GNSS-SDR 0.0.10    
 
+## Scripts
+
+* bin/fft-b210.sh - Run the UHD graphical Fast Fourier Transform program against the B210.
+* bin/gnss-b210-legacy.sh - Run GNSS-SDR using the legacy (old) position fix instead of using RTKLIB.
+* bin/gnss-b210.sh - Run GNSS-SDR against the B210.
+* bin/gnss-file.sh - Run GNSS-SDR against the test file downloaded from the GNSS-SDR web site.
+* bin/gpstool-b210.sh - Run Hazer gpstool against the GNSS-SDR real-time NMEA output file.
+* bin/monitor-b210.sh - Run the GNSS-SDR monitoring tool against an active GNSS-SDR (see Critter/Makefile).
+* bin/setup.sh - Source this file into your shell to set up environment.
+
 ## Notes
 
 ### Software Install
