@@ -4,7 +4,9 @@
 
 <mailto:coverclock@diag.com>
 
-mkdir build
-cd build
-cmake ../
-make
+cd Client/src/monitoring-client    
+mkdir build    
+cd build    
+cmake ../    
+make    
+
