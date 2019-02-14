@@ -1,4 +1,4 @@
-fndef GNSS_SYNCHRO_UDP_SOURCE_H_
+#ifndef GNSS_SYNCHRO_UDP_SOURCE_H_
 #define GNSS_SYNCHRO_UDP_SOURCE_H_
 
 #include <boost/asio.hpp>
