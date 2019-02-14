@@ -106,7 +106,7 @@ GNSS-SDR 0.0.10
 
 ## Notes
 
-### Software Install
+### Software Build
 
     $ pybombs -y prefix init `pwd` -a myprefix -R gnuradio-default
     [INFO] Prefix Python version is: 2.7.12
@@ -229,6 +229,60 @@ GNSS-SDR 0.0.10
     Installing:  (100%) [=========================================================]
     [INFO] Installation successful.
     [INFO] Phase 2 complete: All source packages installed.
+
+    $ cd Critter
+    $ make
+    cd src/monitoring-client; \
+    mkdir -p build; \
+    cd build; \
+    cmake ../; \
+    make
+    -- The CXX compiler identification is GNU 5.4.0
+    -- The C compiler identification is GNU 5.4.0
+    -- Check for working CXX compiler: /usr/bin/c++
+    -- Check for working CXX compiler: /usr/bin/c++ -- works
+    -- Detecting CXX compiler ABI info
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+    -- Check for working C compiler: /usr/bin/cc
+    -- Check for working C compiler: /usr/bin/cc -- works
+    -- Detecting C compiler ABI info
+    -- Detecting C compiler ABI info - done
+    -- Detecting C compile features
+    -- Detecting C compile features - done
+    -- Boost version: 1.58.0
+    -- Found the following Boost libraries:
+    --   system
+    --   serialization
+    -- Looking for wsyncup in /usr/lib/x86_64-linux-gnu/libcurses.so
+    -- Looking for wsyncup in /usr/lib/x86_64-linux-gnu/libcurses.so - found
+    -- Looking for cbreak in /usr/lib/x86_64-linux-gnu/libncurses.so
+    -- Looking for cbreak in /usr/lib/x86_64-linux-gnu/libncurses.so - found
+    -- Found Curses: /usr/lib/x86_64-linux-gnu/libncurses.so
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build
+    make[1]: Entering directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    make[2]: Entering directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    make[3]: Entering directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    Scanning dependencies of target monitoring_lib
+    make[3]: Leaving directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    make[3]: Entering directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    [ 25%] Building CXX object CMakeFiles/monitoring_lib.dir/gnss_synchro_udp_source.cc.o
+    [ 50%] Linking CXX static library libmonitoring_lib.a
+    make[3]: Leaving directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    [ 50%] Built target monitoring_lib
+    make[3]: Entering directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    Scanning dependencies of target monitoring-client
+    make[3]: Leaving directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    make[3]: Entering directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    [ 75%] Building CXX object CMakeFiles/monitoring-client.dir/main.cc.o
+    [100%] Linking CXX executable monitoring-client
+    make[3]: Leaving directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    [100%] Built target monitoring-client
+    make[2]: Leaving directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
+    make[1]: Leaving directory '/home/jsloan/src/com-diag-critter/Critter/src/monitoring-client/build'
 
 ### Software Releases
 
