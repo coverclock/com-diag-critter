@@ -4,7 +4,7 @@
 
 <mailto:coverclock@diag.com>
 
-cd Client/src/monitoring-client    
+cd Critter/src/monitoring-client    
 mkdir build    
 cd build    
 cmake ../    
