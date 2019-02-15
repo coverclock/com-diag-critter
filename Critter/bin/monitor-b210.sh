@@ -10,4 +10,6 @@ WORK=${CRITTER}/Critter/tmp/${CONF}
 cd ${WORK}
 . ../../bin/setup.sh
 PORT=$(grep "^Monitor.udp_port=" ../../etc/${CONF}.conf | sed 's/^.*=//')
+stty sane
+trap "stty sane" 1 2 3 15
 ../../src/monitoring-client/build/monitoring-client ${PORT}
