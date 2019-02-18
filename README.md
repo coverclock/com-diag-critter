@@ -98,13 +98,15 @@ GNSS-SDR 0.0.10
 
 ## Scripts
 
-* bin/fft-b210.sh - Run the UHD graphical Fast Fourier Transform program against the B210.
-* bin/gnss-b210-legacy.sh - Run GNSS-SDR using the legacy (old) position fix instead of using RTKLIB.
-* bin/gnss-b210.sh - Run GNSS-SDR against the B210.
-* bin/gnss-file.sh - Run GNSS-SDR against the test file downloaded from the GNSS-SDR web site.
-* bin/gpstool-b210.sh - Run Hazer gpstool against the GNSS-SDR real-time NMEA output file.
-* bin/monitor-b210.sh - Run the GNSS-SDR monitoring tool against an active GNSS-SDR (see Critter/Makefile).
-* bin/setup.sh - Source this file into your shell to set up environment.
+* Critter/bin/fft-b210.sh - Run the UHD graphical Fast Fourier Transform program against the USRP B210.
+* Critter/bin/fix-b210.sh - Run Hazer gpstool against the GNSS-SDR stored NMEA output file and extract PVT information.
+* Critter/bin/gnss-b210-legacy.sh - Run GNSS-SDR using the legacy (old) position fix instead of using RTKLIB.
+* Critter/bin/gnss-b210.sh - Run GNSS-SDR against the USRP B210.
+* Critter/bin/gnss-file.sh - Run GNSS-SDR against the test file downloaded from the GNSS-SDR web site.
+* Critter/bin/gpstool-b210.sh - Run Hazer gpstool against the GNSS-SDR real-time NMEA output file.
+* Critter/bin/gpstool-bu353w10.sh - Run Hazer gpstool against a 05-BU3553-W10 receiver as a sanity check.
+* Critter/bin/monitor-b210.sh - Run the GNSS-SDR monitoring tool against an active GNSS-SDR (see Critter/Makefile).
+* Critter/bin/setup.sh - Source this file into your shell to set up environment.
 
 ## Notes
 
