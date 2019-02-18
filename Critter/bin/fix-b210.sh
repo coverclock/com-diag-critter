@@ -15,6 +15,6 @@ gpstool -R < ${NMEA}  2> /dev/null | awk '
     /^TIM / { T=substr($2, 0, 19) "Z"; next; }
     /^POS / { N=$2; W=$3; next; }
     /^ALT / { A=$3; next; }
-    /^INT / { if (T != O) { print T, N, W, A; O = T; F=F+1; } R=R+1; T=""; N=""; W=""; A=""; next; }
+    /^INT / { if ((T!=OT)||(N!=ON)||(W!=OW)||(A!=OA)) { print T, N, W, A; OT = T; ON=N; OW=W; OA=A; F=F+1; } R=R+1; next; }
     END     { print F "/" R; }
 '
