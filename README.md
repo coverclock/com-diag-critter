@@ -80,6 +80,8 @@ U.S.A.
 
 <https://gnss-sdr.org/docs/sp-blocks/>
 
+<https://in-the-sky.org/satmap_radar.php>
+
 ## Hardware
 
 Intel NUC7i7BNH (Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2) "Cadmium"    
