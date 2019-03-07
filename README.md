@@ -82,6 +82,12 @@ U.S.A.
 
 <https://in-the-sky.org/satmap_radar.php>
 
+<https://www.ngs.noaa.gov/NGSDataExplorer/>
+
+<https://maps.google.com>
+
+<https://github.com/gnss-sdr/gnss-sdr/issues/185>
+
 ## Hardware
 
 Intel NUC7i7BNH (Intel Core i7-7567U x86_64 @ 3.50GHz x 2 x 2) "Cadmium"    

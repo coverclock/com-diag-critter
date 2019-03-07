@@ -10,4 +10,8 @@ WORK=${CRITTER}/Critter/tmp/${CONF}
 mkdir -p ${WORK}
 cd ${WORK}
 . ../../bin/setup.sh
-gnss-sdr --config_file=../../etc/${CONF}.conf --log_dir=. -logtostderr -colorlogtostderr
+ touch ./gps_ephemeris.xml
+ touch ./gps_utc_model.xml
+ touch ./gps_iono.xml
+ touch ./gps_almanac.xml
+coreable gnss-sdr --config_file=../../etc/${CONF}.conf --log_dir=. -logtostderr -colorlogtostderr

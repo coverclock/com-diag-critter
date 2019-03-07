@@ -6,8 +6,8 @@
 # ${HOME}/src/gnuradio
 # ${HOME}/src/gnss-sdr
 # GNU Radio 3.7.13.4, gnss-sdr 0.0.10.git-next-ca2e22c
-BUILD=next
-# GNU Radio 3.7.13.4, gnss-sdr 0.0.10
+BUILD=master
+#BUILD=next
 #BUILD=v0.0.10
 HERE=$(dirname ${BASH_SOURCE})
 THERE=$(cd ${HERE}; pwd)

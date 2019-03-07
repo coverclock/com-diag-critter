@@ -10,4 +10,4 @@ WORK=${CRITTER}/Critter/tmp/${CONF}
 mkdir -p ${WORK}
 cd ${WORK}
 . ../../bin/setup.sh
-gnss-sdr --config_file=../../etc/${CONF}.conf --log_dir=. -logtostderr -colorlogtostderr
+coreable gnss-sdr --config_file=../../etc/${CONF}.conf --log_dir=. -logtostderr -colorlogtostderr

@@ -10,4 +10,4 @@ WORK=${CRITTER}/Critter/tmp/${CONF}
 cd ${WORK}
 . ../../bin/setup.sh
 NMEA=$(grep "^PVT.nmea_dump_filename=" ../../etc/${CONF}.conf | sed 's/^.*=//')
-tail -n +0 -f ${NMEA} | gpstool -E
+tail -n +0 -F ${NMEA} | coreable gpstool -E

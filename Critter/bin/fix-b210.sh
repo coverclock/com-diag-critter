@@ -10,7 +10,7 @@ WORK=${CRITTER}/Critter/tmp/${CONF}
 cd ${WORK}
 . ../../bin/setup.sh
 NMEA=$(grep "^PVT.nmea_dump_filename=" ../../etc/${CONF}.conf | sed 's/^.*=//')
-gpstool -R < ${NMEA}  2> /dev/null | awk '
+coreable gpstool -R < ${NMEA}  2> /dev/null | awk '
     BEGIN   { F=0; R=0; }
     /^TIM / { T=substr($2, 0, 19) "Z"; next; }
     /^POS / { N=$2; W=$3; next; }
