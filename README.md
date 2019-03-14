@@ -44,6 +44,8 @@ U.S.A.
 
 <https://github.com/coverclock/com-diag-hazer>
 
+<https://github.com/coverclock/com-diag-diminuto>
+
 ## Articles
 
 <https://coverclock.blogspot.com/2018/04/a-menagerie-of-gps-devices-with-usb.html>
